@@ -13,6 +13,9 @@
 		20CCE53F25EF5A1F003A934E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20CCE53E25EF5A1F003A934E /* Assets.xcassets */; };
 		20CCE54225EF5A1F003A934E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20CCE54125EF5A1F003A934E /* Preview Assets.xcassets */; };
 		20CCE54525EF5A1F003A934E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20CCE54325EF5A1F003A934E /* LaunchScreen.storyboard */; };
+		20CCE55025EF5F83003A934E /* HNAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCE54F25EF5F83003A934E /* HNAPIs.swift */; };
+		20CCE55325EF64A2003A934E /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCE55225EF64A2003A934E /* NewsManager.swift */; };
+		20CCE55625EFB58B003A934E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCE55525EFB58B003A934E /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,10 @@
 		20CCE54125EF5A1F003A934E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20CCE54425EF5A1F003A934E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20CCE54625EF5A1F003A934E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20CCE54F25EF5F83003A934E /* HNAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNAPIs.swift; sourceTree = "<group>"; };
+		20CCE55225EF64A2003A934E /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
+		20CCE55525EFB58B003A934E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		20CCE55825EFC1A2003A934E /* H4X0R News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4X0R News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,8 @@
 		20CCE53725EF5A1E003A934E /* H4X0R News */ = {
 			isa = PBXGroup;
 			children = (
+				20CCE55825EFC1A2003A934E /* H4X0R News.entitlements */,
+				20CCE54D25EF5A91003A934E /* Models */,
 				20CCE53825EF5A1E003A934E /* AppDelegate.swift */,
 				20CCE53A25EF5A1E003A934E /* SceneDelegate.swift */,
 				20CCE53C25EF5A1E003A934E /* ContentView.swift */,
@@ -63,6 +72,7 @@
 				20CCE54325EF5A1F003A934E /* LaunchScreen.storyboard */,
 				20CCE54625EF5A1F003A934E /* Info.plist */,
 				20CCE54025EF5A1F003A934E /* Preview Content */,
+				20CCE55525EFB58B003A934E /* DetailView.swift */,
 			);
 			path = "H4X0R News";
 			sourceTree = "<group>";
@@ -73,6 +83,15 @@
 				20CCE54125EF5A1F003A934E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		20CCE54D25EF5A91003A934E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20CCE54F25EF5F83003A934E /* HNAPIs.swift */,
+				20CCE55225EF64A2003A934E /* NewsManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20CCE53925EF5A1E003A934E /* AppDelegate.swift in Sources */,
+				20CCE55625EFB58B003A934E /* DetailView.swift in Sources */,
 				20CCE53B25EF5A1E003A934E /* SceneDelegate.swift in Sources */,
+				20CCE55325EF64A2003A934E /* NewsManager.swift in Sources */,
+				20CCE55025EF5F83003A934E /* HNAPIs.swift in Sources */,
 				20CCE53D25EF5A1E003A934E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
 				DEVELOPMENT_TEAM = PBWMNM25CU;
@@ -297,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eremej.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
 				DEVELOPMENT_TEAM = PBWMNM25CU;
@@ -318,6 +343,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eremej.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
